@@ -36,9 +36,9 @@
 
 ## Usage
 ```javascript
-import RNReactNativeAccessibility from 'react-native-accessibility';
+import { announceForAccessibility, focusOnView } from 'react-native-accessibility';
 
-// TODO: What to do with the module?
-RNReactNativeAccessibility;
+announceForAccessibility('type some message here')
+focusOnView(this.refs.someRef) // to focus on a View pass a ref to the view 
 ```
   
