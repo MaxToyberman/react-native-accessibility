@@ -7,11 +7,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxToyberman/react-native-accessibility"
+  },
   "keywords": [
     "react-native"
   ],
-  "author": "Max Toyberman",
+  "author": "Max Toyberman <maxtoyberman@gmail.com>",
   "license": "",
+  "bugs": {
+    "url": "https://github.com/MaxToyberman/react-native-accessibility/issues"
+  },
+  "homepage": "https://github.com/MaxToyberman/react-native-accessibility#readme",
   "peerDependencies": {
     "react-native": "^0.41.2"
 
