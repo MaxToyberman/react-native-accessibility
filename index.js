@@ -10,6 +10,10 @@ module.exports = {
     announceForAccessibility,
     focusOnView(ref) {
         const reactTag = findNodeHandle(ref)
+        if(!reactTag) {
+            console.warn("reactTag is null")
+            return
+        }
         Platform.OS === 'android' ? UIManager.sendAccessibilityEvent(
             reactTag,
             8
