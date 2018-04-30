@@ -10,8 +10,8 @@ const announceForAccessibility = Platform.select({android: RNAccessibility.annou
 module.exports = {
     announceForAccessibility,
     focusOnView(ref) {
-        if(!ref || !reactTag) {
-            console.warn("reactTag is null")
+        if(!ref) {
+            console.warn("ref is null")
             return
         }
         const reactTag = findNodeHandle(ref)
