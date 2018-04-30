@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-accessibility",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Using Accessibility in React-Native is confusing, this library will allow you to add accessibility easily to your app",
   "main": "index.js",
   "scripts": {

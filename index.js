@@ -3,20 +3,22 @@ import { NativeModules, AccessibilityInfo, findNodeHandle, Platform, UIManager }
 
 const { RNAccessibility } = NativeModules;
 
-const announceForAccessibility = Platform.OS === 'android' ? RNAccessibility.announce : AccessibilityInfo.announceForAccessibility;
+const FOCUS_ON_VIEW = 8;
 
+const announceForAccessibility = Platform.select({android: RNAccessibility.announc , ios:AccessibilityInfo.announceForAccessibility});
 
 module.exports = {
     announceForAccessibility,
     focusOnView(ref) {
-        const reactTag = findNodeHandle(ref)
-        if(!reactTag) {
+        if(!ref || !reactTag) {
             console.warn("reactTag is null")
             return
         }
+        const reactTag = findNodeHandle(ref)
+ 
         Platform.OS === 'android' ? UIManager.sendAccessibilityEvent(
             reactTag,
-            8
+            FOCUS_ON_VIEW
         ) : AccessibilityInfo.setAccessibilityFocus(reactTag)
     }
 }
