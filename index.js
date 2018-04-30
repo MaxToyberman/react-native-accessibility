@@ -5,7 +5,7 @@ const { RNAccessibility } = NativeModules;
 
 const FOCUS_ON_VIEW = 8;
 
-const announceForAccessibility = Platform.select({android: RNAccessibility.announc , ios:AccessibilityInfo.announceForAccessibility});
+const announceForAccessibility = Platform.select({android: RNAccessibility.announce , ios:AccessibilityInfo.announceForAccessibility});
 
 module.exports = {
     announceForAccessibility,
