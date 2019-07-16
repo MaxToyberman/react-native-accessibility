@@ -1,14 +1,14 @@
+require 'json'
+
+package = JSON.parse(File.read(File.join(__dir__, '../package.json')))
 
 Pod::Spec.new do |s|
-  s.name         = "RNReactNativeAccessibility"
-  s.version      = "1.0.0"
-  s.summary      = "RNReactNativeAccessibility"
-  s.description  = <<-DESC
-                  RNReactNativeAccessibility
-                   DESC
-  s.homepage     = ""
-  s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.name         = package['name']
+  s.version      = package['version']
+  s.summary      = package['description']
+
+  s.homepage     = package['homepage']
+  s.license      = package['license']
   s.author             = { "author" => "author@domain.cn" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/author/RNReactNativeAccessibility.git", :tag => "master" }
@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  #s.dependency "others"
 
 end
 
